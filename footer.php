@@ -1,5 +1,5 @@
 <?php 
-$company_name = "Company Name";
+$company_name = "Companies Name";
 $tel_number = "00 01234 567 8910";
 ?>
 
