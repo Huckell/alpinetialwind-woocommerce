@@ -972,10 +972,10 @@ select.orderby {
 .woocommerce-MyAccount-content form input {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-bottom-width: 2px;
-  border-style: dashed;
+  border-width: 2px;
+  border-style: solid;
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(191 219 254 / var(--tw-border-opacity));
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
