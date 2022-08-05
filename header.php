@@ -14,7 +14,7 @@
 
 <!--nav here-->
 
-<nav class="bg-white dark:bg-gray-700 border-b border-gray-200 dark:border-gray-700 grid place-items-center py-8">
+<nav class="bg-white dark:bg-gray-700 border-b border-gray-200 dark:border-gray-500 grid place-items-center py-8 shadow-md shadow-gray-200/50 dark:shadow-md dark:shadow-gray-900/50">
   <div class="w-full text-gray-700">
 
     <div x-data="{ open: false }" class="flex flex-col mx-auto ax-w-screen lg:flex-row">
