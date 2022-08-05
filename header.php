@@ -10,16 +10,14 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-<header>
+<header class="bg-white dark:bg-gray-700 border-b border-gray-200 dark:border-gray-500 shadow-md shadow-gray-200/50 dark:shadow-md dark:shadow-gray-900/50">
 
-<!--nav here-->
-
-<nav class="bg-white dark:bg-gray-700 border-b border-gray-200 dark:border-gray-500 grid place-items-center py-8 shadow-md shadow-gray-200/50 dark:shadow-md dark:shadow-gray-900/50">
+<nav class="grid place-items-center cw-xl">
   <div class="w-full text-gray-700">
 
     <div x-data="{ open: false }" class="flex flex-col mx-auto ax-w-screen lg:flex-row">
       
-    <a href="/" class="ml-4 lg:ml-2 xl:ml-4 text-lg font-semibold tracking-widest text-gray-900 uppercase dark:text-white focus:outline-none focus:shadow-outline">
+    <a href="/" class="text-lg font-semibold tracking-widest text-gray-900 uppercase dark:text-white focus:outline-none focus:shadow-outline">
               Website Name
               <span class="sr-only">Home</span>
       </a>
@@ -137,21 +135,21 @@
                   </li>
                 </ul>
                 
-                <div class="mt-8 lg:mr-2 xl:mr-4 lg:mt-0 lg:inline-grid lg:grid-cols-4 lg:absolute lg:right-0">
+                <div class="lg:inline-grid lg:grid-cols-4 lg:absolute lg:right-0">
 
                 <?php if(is_user_logged_in()) { ?>
 
-                    <p class="dark:text-white">
-                      Account
-                    </p>
+                  <a href="<?php get_site_url(); ?>/cart">
+                        C                     
+                    </a>
+                    
+                    <a href="<?php get_site_url(); ?>/my-account">
+                        A                    
+                    </a>
 
-                    <p class="dark:text-white">
-                      Cart
-                    </p>
-                  
-                    <p class="dark:text-white">
+                    <a href="<?php echo wp_logout_url(); ?>">
                         Log Out                     
-                    </p>
+                    </a>
                   
                   
                 <?php } else { ?>
@@ -168,22 +166,19 @@
                         Sign Up
                       </a>
                     </p>
-                   
+                                       
                 <?php } ?>
-
-                <!-- darkMode / lightMode Toggle -->
-                <button type="button" @click="darkMode = (darkMode === 'true' ? 'false' : 'true')" class="rounded hover:shadow py-2 px-6 border-gray-500 border bg-black text-white dark:text-black dark:bg-white mr-4 ml-4 lg:mr-0 lg:ml-0">
-                  <span x-show="darkMode === 'true'">Light Mode</span>
-                  <span x-show="darkMode === 'false'">Dark Mode</span>
-                </button>
+               
         </div>
       
     </nav>
     </nav>
-      
-    </div>
-    </div>              
-
+        
         <!--end nav-->
+
+  <div id="nav-search" class="cw-xl">
+    <?php aws_get_search_form( true ); ?>
+  </div>
+      
 </header>
   

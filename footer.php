@@ -267,7 +267,11 @@ $tel_number = "00 01234 567 8910";
     </div><!--end social nav-->
   </div><!--end company info-->
   
-
+<!-- darkMode / lightMode Toggle -->
+  <button type="button" @click="darkMode = (darkMode === 'true' ? 'false' : 'true')" class="rounded hover:shadow py-2 px-6 border-gray-500 border bg-black text-white dark:text-black dark:bg-white mr-4 ml-4 lg:mr-0 lg:ml-0">
+    <span x-show="darkMode === 'true'">Light Mode</span>
+    <span x-show="darkMode === 'false'">Dark Mode</span>
+  </button>
 </footer> 
 
 
