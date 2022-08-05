@@ -50,7 +50,7 @@
         </div>
         
 
-      <nav class="flex-col flex-grow hidden h-screen pb-4 lg:pb-0 lg:flex lg:justify-start lg:flex-row lg:h-auto" aria-label="Main Navigation" :class="{'flex': open, 'hidden': !open}">
+      <nav class="flex-col flex-grow hidden h-screen pb-4 lg:pb-0 lg:flex lg:justify-start lg:flex-row lg:h-auto lg:relative" aria-label="Main Navigation" :class="{'flex': open, 'hidden': !open}">
       
         <ul class="flex flex-col flex-wrap pl-0 mt-4 lg:flex-row lg:-mt-2 dark:text-white">
           <li class="group relative block lg:px-0 xl:px-0 mr-1 py-2" x-data="{isOpen:false }" @mouseleave="isOpen = false">
@@ -134,39 +134,40 @@
                     </a>
                   </li>
                 </ul>
-                
-                <div class="lg:inline-grid lg:grid-cols-4 lg:absolute lg:right-0">
 
                 <?php if(is_user_logged_in()) { ?>
-
-                  <a href="<?php get_site_url(); ?>/cart">
+                  <ul class="flex flex-col flex-wrap pl-0 mt-4 lg:flex-row lg:mt-0 lg:absolute lg:right-0"> 
+                    <li class="px-4">
+                      <a class="hover:text-blue-500" href="<?php get_site_url(); ?>/cart">
                         C                     
-                    </a>
-                    
-                    <a href="<?php get_site_url(); ?>/my-account">
-                        A                    
-                    </a>
-
-                    <a href="<?php echo wp_logout_url(); ?>">
-                        Log Out                     
-                    </a>
-                  
+                      </a>
+                    </li>
+                    <li class="px-4">  
+                      <a class="hover:text-blue-500" href="<?php get_site_url(); ?>/my-account">
+                          A                    
+                      </a>
+                    </li>
+                    <li class="pl-4">  
+                      <a class="hover:text-blue-500" href="<?php echo wp_logout_url(); ?>">
+                          Log Out                     
+                      </a>
+                    </li>
+                  </ul>
                   
                 <?php } else { ?>
                   
-                    <p>
-                      <a href="<?php echo wp_login_url(); ?>" class="dark:text-white"">
+                  <ul class="flex flex-col flex-wrap pl-0 mt-4 lg:flex-row lg:mt-0 lg:absolute lg:right-0"> 
+                    <li class="px-4">
+                      <a class="hover:text-blue-500" href="<?php echo wp_login_url(); ?>" class="dark:text-white"">
                         Login
                       </a>
-                    </p>
-                   
-                  
-                    <p>
-                      <a href="<?php echo wp_registration_url(); ?>" class="dark:text-white"">
+                    </li>
+                    <li class="px-4">
+                      <a class="hover:text-blue-500" href="<?php echo wp_registration_url(); ?>" class="dark:text-white"">
                         Sign Up
                       </a>
-                    </p>
-                                       
+                    </li>
+                  </ul>                     
                 <?php } ?>
                
         </div>
@@ -174,7 +175,7 @@
     </nav>
     </nav>
         
-        <!--end nav-->
+    <!--end nav-->
 
   <div id="nav-search" class="cw-xl">
     <?php aws_get_search_form( true ); ?>

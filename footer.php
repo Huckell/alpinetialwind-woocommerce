@@ -41,7 +41,7 @@ $tel_number = "00 01234 567 8910";
         </div>
 
         <div class="md:mr-auto mb-6">
-          <button type="button" class="inline-block bg-blue-500 hover:bg-blue-200 text-white font-bold py-2 px-4 my-4 rounded transition duration-150 ease-in-out">Subscribe</button>
+          <button type="button" class="inline-block bg-blue-500 hover:bg-blue-200 text-white font-bold py-2 px-6 my-4 rounded transition duration-150 ease-in-out">Subscribe</button>
         </div>
       
     </form>
@@ -50,7 +50,7 @@ $tel_number = "00 01234 567 8910";
   <!--footer nav-->
   <div class="container page-section mx-auto grid md:grid-cols-4 gird-cols-1 gap-4 pb-8 pt-8 md:p-4">
     <!-- footer menu one -->
-    <div class="border-b border-gray-300 pb-6 sm:border-b sm:border-gray-300 md:border-none md:text-left lg:pl-20">
+    <div class="border-b border-gray-300 pb-6 sm:border-b sm:border-gray-300 md:border-none md:text-left">
       <h3 class="text-2xl font-medium mb-2">Navigation</h3>
      <?php wp_nav_menu( array(
         'theme_location'  => 'footer-one',
@@ -75,7 +75,7 @@ $tel_number = "00 01234 567 8910";
     )); ?>
     </div>
     <!-- footer menu two -->
-    <div class="border-b border-gray-300 pb-6 sm:border-b sm:border-gray-300 md:border-none md:text-left lg:pl-20">
+    <div class="border-b border-gray-300 pb-6 sm:border-b sm:border-gray-300 md:border-none md:text-left">
       <h3 class="text-2xl font-medium mb-2">Legal</h3>
       <?php wp_nav_menu( array(
         'theme_location'  => 'footer-two',
@@ -100,7 +100,7 @@ $tel_number = "00 01234 567 8910";
     )); ?>
     </div>
     <!-- footer menu three -->
-    <div class="border-b border-gray-300 pb-6 sm:border-b sm:border-gray-300 md:border-none md:text-left lg:pl-20">
+    <div class="border-b border-gray-300 pb-6 sm:border-b sm:border-gray-300 md:border-none md:text-left">
       <h3 class="text-2xl font-medium mb-2">Finder</h3>
       <?php wp_nav_menu( array(
         'theme_location'  => 'footer-three',
@@ -126,7 +126,7 @@ $tel_number = "00 01234 567 8910";
     </div>
 
         <!-- footer menu four -->
-        <div class="md:text-left lg:pl-20">
+        <div class="md:text-left">
       <h3 class="text-2xl font-medium mb-2">Locations</h3>
       <?php wp_nav_menu( array(
         'theme_location'  => 'footer-four',
@@ -152,6 +152,12 @@ $tel_number = "00 01234 567 8910";
     </div> 
 
   </div> <!--end menu container-->
+
+<!-- darkMode / lightMode Toggle  Todo : create as floating button-->
+  <button type="button" @click="darkMode = (darkMode === 'true' ? 'false' : 'true')" class="rounded hover:shadow py-2 px-6 border-gray-500 border bg-black text-white dark:text-black dark:bg-white mr-4 ml-4 lg:mr-0 lg:ml-0">
+    <span x-show="darkMode === 'true'">Light Mode</span>
+    <span x-show="darkMode === 'false'">Dark Mode</span>
+  </button>
 
   <div class="text-gray-400 text-base font-medium p-8">
   <inline class="dark:text-white">&copy; <?php echo date("Y"); ?> -  <?php echo $company_name; ?></inline> 
@@ -267,11 +273,6 @@ $tel_number = "00 01234 567 8910";
     </div><!--end social nav-->
   </div><!--end company info-->
   
-<!-- darkMode / lightMode Toggle -->
-  <button type="button" @click="darkMode = (darkMode === 'true' ? 'false' : 'true')" class="rounded hover:shadow py-2 px-6 border-gray-500 border bg-black text-white dark:text-black dark:bg-white mr-4 ml-4 lg:mr-0 lg:ml-0">
-    <span x-show="darkMode === 'true'">Light Mode</span>
-    <span x-show="darkMode === 'false'">Dark Mode</span>
-  </button>
 </footer> 
 
 
