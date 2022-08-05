@@ -14,7 +14,7 @@
 
 <!--nav here-->
 
-<nav class="bg-white dark:bg-gray-700 border-b border-gray-200 dark:border-gray-700 grid place-items-center py-8">
+<nav class="bg-white dark:bg-gray-700 border-b border-gray-200 dark:border-gray-500 grid place-items-center py-8 shadow-md shadow-gray-200/50 dark:shadow-md dark:shadow-gray-900/50">
   <div class="w-full text-gray-700">
 
     <div x-data="{ open: false }" class="flex flex-col mx-auto ax-w-screen lg:flex-row">
@@ -135,49 +135,44 @@
               
                     </a>
                   </li>
-
-                  <li class="group relative block lg:px-0 xl:px-0 mr-1 py-2">
-                    <a href="<?php echo esc_url(site_url('/search')); ?>" class=" py-2 px-4 group-hover:text-blue-500 search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></a>
-                  </li>
-
                 </ul>
                 
-                <div class="mt-8 lg:mr-2 xl:mr-4 lg:mt-0 lg:inline-grid lg:grid-cols-3 lg:absolute lg:right-0">
+                <div class="mt-8 lg:mr-2 xl:mr-4 lg:mt-0 lg:inline-grid lg:grid-cols-4 lg:absolute lg:right-0">
 
                 <?php if(is_user_logged_in()) { ?>
 
-                    <button>
-                      <a href="<?php echo esc_url(site_url('/dashboard')); ?>" class="bg-orange-400 text-white px-4 py-2 rounded mr-4 ml-4 lg:mr-0 lg:ml-0">
-                        Dashboard
-                      </a>
-                    </button>
+                    <p class="dark:text-white">
+                      Account
+                    </p>
+
+                    <p class="dark:text-white">
+                      Cart
+                    </p>
                   
-                    <button>
-                      <a href="<?php echo wp_logout_url();  ?>" class="bg-red-400 text-white px-4 py-2 rounded">
-                        Log Out
-                      </a>
-                    </button>
+                    <p class="dark:text-white">
+                        Log Out                     
+                    </p>
                   
                   
                 <?php } else { ?>
                   
-                    <button>
-                      <a href="<?php echo wp_login_url(); ?>" class="bg-orange-400 text-white justify-right px-4 py-2 rounded mr-4 ml-4 lg:mr-0 lg:ml-0">
+                    <p>
+                      <a href="<?php echo wp_login_url(); ?>" class="dark:text-white"">
                         Login
                       </a>
-                    </button>
+                    </p>
                    
                   
-                    <button>
-                      <a href="<?php echo wp_registration_url(); ?>" class="bg-red-400 text-white justify-right px-4 py-2 rounded">
+                    <p>
+                      <a href="<?php echo wp_registration_url(); ?>" class="dark:text-white"">
                         Sign Up
                       </a>
-                    </button>
+                    </p>
                    
                 <?php } ?>
 
                 <!-- darkMode / lightMode Toggle -->
-                <button type="button" @click="darkMode = (darkMode === 'true' ? 'false' : 'true')" class="rounded hover:shadow p-1 border-gray-500 border bg-black text-white dark:text-black dark:bg-white mr-4 ml-4 lg:mr-0 lg:ml-0">
+                <button type="button" @click="darkMode = (darkMode === 'true' ? 'false' : 'true')" class="rounded hover:shadow py-2 px-6 border-gray-500 border bg-black text-white dark:text-black dark:bg-white mr-4 ml-4 lg:mr-0 lg:ml-0">
                   <span x-show="darkMode === 'true'">Light Mode</span>
                   <span x-show="darkMode === 'false'">Dark Mode</span>
                 </button>

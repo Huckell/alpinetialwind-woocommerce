@@ -82,6 +82,41 @@ cite{
     content:"~ ";
     @apply text-blue-200;
 }
+/*woocomerce global*/
+div.woocommerce{
+    @apply cw-xl; 
+}
+.woocommerce a.button{
+    @apply !px-6 !py-4 !rounded;
+}
+th{
+    @apply dark:text-white;
+}
+bdi{ /*woocommerce cart prices*/
+    @apply dark:text-white;
+}
+.product_meta{
+    @apply dark:text-white;
+}
+/*product single*/
+td.value select{
+    @apply border border-gray-500 py-2 px-4 rounded;
+}
+/*cart*/
+.woocommerce table.shop_table{
+    @apply dark:border-gray-500;
+}
+.woocommerce table.shop_table td{
+    @apply dark:border-t-gray-500;
+}
+input#coupon_code{
+    @apply w-auto rounded;
+}
+/*shop page*/
+select.orderby{
+    @apply border border-gray-500 px-4 py-2 rounded;
+}
+
 /*end*/
 
 @tailwind components;
