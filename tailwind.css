@@ -130,6 +130,9 @@ nav.woocommerce-MyAccount-navigation ul li{
 nav.woocommerce-MyAccount-navigation ul li a{
     @apply hover:text-blue-500;
 }
+legend{
+    @apply dark:text-white;
+}
 /*end*/
 
 @tailwind components;
