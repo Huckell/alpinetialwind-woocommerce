@@ -130,8 +130,11 @@ nav.woocommerce-MyAccount-navigation ul li{
 nav.woocommerce-MyAccount-navigation ul li a{
     @apply hover:text-blue-500;
 }
+input span em{
+    @apply dark:text-gray-300;
+}
 legend{
-    @apply dark:text-white;
+    @apply dark:text-gray-300;
 }
 /*end*/
 

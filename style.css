@@ -997,6 +997,16 @@ nav.woocommerce-MyAccount-navigation ul li a:hover {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.dark input span em {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.dark legend {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 /*end*/
 
 .container {
